@@ -5,8 +5,6 @@ project([PH]Toolset)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall -Wextra -Wl,--no-undefined")
 
-option(BUILD_SHARED_LIBS "" ON)
-option(NO_OBJECTS "" ON)
 option(CLI "" ON)
 # option(GLTF "" ON)
 

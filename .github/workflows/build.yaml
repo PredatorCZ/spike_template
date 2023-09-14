@@ -20,7 +20,7 @@ jobs:
         shell: bash
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: recursive
           fetch-depth: 0
@@ -47,7 +47,7 @@ jobs:
           tar -cvaf ../[PH]Toolset-v${{env.SK_VERSION}}-linux-amd64.tar.xz .
 
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: [PH]Toolset-linux-amd64
           path: ${{github.workspace}}/[PH]Toolset-v${{env.SK_VERSION}}-linux-amd64.tar.xz
@@ -56,7 +56,7 @@ jobs:
   build-widle:
     runs-on: windows-2022
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           submodules: recursive
           fetch-depth: 0
